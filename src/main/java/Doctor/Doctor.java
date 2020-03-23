@@ -6,11 +6,14 @@ public class Doctor {
     private String otch;
     private String spec;
 
-    public Doctor(String name, String fam, String otch, String spec) {
+
+    public Doctor(String name, String secondName, String thierdName, String spec) {
         this.name = name;
         this.fam = fam;
         this.otch = otch;
         this.spec = spec;
+        System.out.println("Doctor");
+        System.out.println( name + " " + secondName + " " + thierdName + " " + spec);
     }
 
     public String getName() {
