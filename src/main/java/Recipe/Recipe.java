@@ -22,30 +22,37 @@ public class Recipe {
  }
 
  public String getName() {
+
   return name;
  }
 
  public void setName(String name) {
+
   this.name = name;
  }
 
  public String getOpis() {
+
   return opis;
  }
 
  public void setOpis(String opis) {
+
   this.opis = opis;
  }
 
  public Patient getVlad() {
+
   return vlad;
  }
 
  public void setVlad(Patient vlad) {
+
   this.vlad = vlad;
  }
 
  public Doctor getAndrey() {
+
   return andrey;
  }
 
@@ -67,6 +74,7 @@ public class Recipe {
 
  public void setTerm(int term) {
   this.term = term;
+
  }
 
  public String getPriority() {
@@ -75,8 +83,5 @@ public class Recipe {
 
  public void setPriority(String priority) {
   this.priority = priority;
-  String norm = "Normal";
-  String cito = "Cito";
-  String statim = "Statim";
  }
 }

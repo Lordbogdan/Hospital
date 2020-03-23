@@ -11,7 +11,7 @@ public class Patient {
         this.secondName = secondName;
         this.thierdName = thierdName;
         this.phone = phone;
-        System.out.println("Пациент");
+        System.out.println("Patient");
     }
 
     public String getName() {
