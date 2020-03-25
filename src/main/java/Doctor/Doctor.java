@@ -6,6 +6,11 @@ public class Doctor {
     private String thierdName;
     private String specialization;
 
+    public Doctor(){
+
+    }
+
+
 
     public Doctor(String name, String secondName, String thierdName, String specialization) {
         this.name = name;
@@ -13,9 +18,11 @@ public class Doctor {
         this.thierdName = thierdName;
         this.specialization = specialization;
 
+
     }
 
     public String getName( ) {
+
         return name;
     }
 
@@ -45,5 +52,14 @@ public class Doctor {
 
     public void setSpecialization(String specialization) {
         this.specialization = specialization;
+    }
+    @Override
+    public String toString() {
+        return "Doctor{" +
+                "name='" + name + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", thierdName='" + thierdName + '\'' +
+                ", specialization='" + specialization + '\'' +
+                '}';
     }
 }
