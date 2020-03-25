@@ -1,4 +1,4 @@
-package Patient;
+package  Patient;
 
 public class Patient {
     private String name;
@@ -11,8 +11,7 @@ public class Patient {
         this.secondName = secondName;
         this.thierdName = thierdName;
         this.phone = phone;
-        System.out.println("Peatient");
-        System.out.println( name + " " + secondName + " " + thierdName + " " + phone);
+
     }
 
     public String getName() {

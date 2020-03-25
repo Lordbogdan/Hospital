@@ -4,20 +4,16 @@ import Patient.Patient;
 
 public class Recipe {
  private String name;
- private String opis;
- private Patient vlad;
- private Doctor andrey;
+ private String description;
  private int data;
- private int term;
+ private int shelfLife;
  private String priority;
 
- public Recipe(String name, String opis, Patient vlad, Doctor andrey, int data, int term, String priority) {
+ public Recipe(String name, String description, int data, int shelfLife, String priority) {
   this.name = name;
-  this.opis = opis;
-  this.vlad = vlad;
-  this.andrey = andrey;
+  this.description = description;
   this.data = data;
-  this.term = term;
+  this.shelfLife = shelfLife;
   this.priority = priority;
  }
 
@@ -31,33 +27,14 @@ public class Recipe {
   this.name = name;
  }
 
- public String getOpis() {
+ public String getDescription() {
 
-  return opis;
+  return description;
  }
 
- public void setOpis(String opis) {
+ public void setDescription(String description) {
 
-  this.opis = opis;
- }
-
- public Patient getVlad() {
-
-  return vlad;
- }
-
- public void setVlad(Patient vlad) {
-
-  this.vlad = vlad;
- }
-
- public Doctor getAndrey() {
-
-  return andrey;
- }
-
- public void setAndrey(Doctor andrey) {
-  this.andrey = andrey;
+  this.description = description;
  }
 
  public int getData() {
@@ -68,12 +45,12 @@ public class Recipe {
   this.data = data;
  }
 
- public int getTerm() {
-  return term;
+ public int getShelfLife() {
+  return shelfLife;
  }
 
- public void setTerm(int term) {
-  this.term = term;
+ public void setShelfLife(int shelfLife) {
+  this.shelfLife = shelfLife;
 
  }
 

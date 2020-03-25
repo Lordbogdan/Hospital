@@ -2,21 +2,20 @@ package Doctor;
 
 public class Doctor {
     private String name;
-    private String fam;
-    private String otch;
-    private String spec;
+    private String secondName;
+    private String thierdName;
+    private String specialization;
 
 
-    public Doctor(String name, String secondName, String thierdName, String spec) {
+    public Doctor(String name, String secondName, String thierdName, String specialization) {
         this.name = name;
-        this.fam = fam;
-        this.otch = otch;
-        this.spec = spec;
-        System.out.println("Doctor");
-        System.out.println( name + " " + secondName + " " + thierdName + " " + spec);
+        this.secondName = secondName;
+        this.thierdName = thierdName;
+        this.specialization = specialization;
+
     }
 
-    public String getName() {
+    public String getName( ) {
         return name;
     }
 
@@ -24,27 +23,27 @@ public class Doctor {
         this.name = name;
     }
 
-    public String getFam() {
-        return fam;
+    public String getSecondName() {
+        return secondName;
     }
 
-    public void setFam(String fam) {
-        this.fam = fam;
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
     }
 
-    public String getOtch() {
-        return otch;
+    public String getThierdName() {
+        return thierdName;
     }
 
-    public void setOtch(String otch) {
-        this.otch = otch;
+    public void setThierdName(String thierdName) {
+        this.thierdName = thierdName;
     }
 
-    public String getSpec() {
-        return spec;
+    public String getSpecialization() {
+        return specialization;
     }
 
-    public void setSpec(String spec) {
-        this.spec = spec;
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
     }
 }
