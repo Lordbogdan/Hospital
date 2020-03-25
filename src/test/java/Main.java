@@ -28,14 +28,12 @@ public class Main {
         if (x == 1) {
             System.out.println("Введите данные врача:");
             if(z == scanner.nextLine()){
-                System.out.println("Ввод: " + z);
+
             }
         }
         else if (x == 2) {
             System.out.println("Введите данные пациента:");
-            if(z == scanner.nextLine(){
-                System.out.println("Ввод:" + z);
-
+            if(z == scanner.nextLine()) {
             }
         }
         else {
