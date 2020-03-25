@@ -17,7 +17,7 @@ public class Doctor {
         this.secondName = secondName;
         this.thierdName = thierdName;
         this.specialization = specialization;
-
+        System.out.println();
 
     }
 
