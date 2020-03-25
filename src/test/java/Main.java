@@ -1,6 +1,8 @@
 import Doctor.Doctor;
 import Patient.Patient;
 import Recipe.Recipe;
+
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 
@@ -20,13 +22,21 @@ public class Main {
 
         Scanner scanner = new Scanner(System.in);
 
-        String x = scanner.nextLine();
+        int x = scanner.nextInt();
         String z = scanner.nextLine();
-        if (x == "Зарегистрировать врача") {
+
+        if (x == 1) {
             System.out.println("Введите данные врача:");
+            if(z == scanner.nextLine()){
+                System.out.println("Ввод: " + z);
+            }
         }
-        else if (z == "Зарегистрировать пациента") {
+        else if (x == 2) {
             System.out.println("Введите данные пациента:");
+            if(z == scanner.nextLine(){
+                System.out.println("Ввод:" + z);
+
+            }
         }
         else {
             System.out.println("Выйти");
