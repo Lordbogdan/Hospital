@@ -3,21 +3,25 @@ import Doctor.Doctor;
 import Patient.Patient;
 
 public class Recipe {
- private String name;
- private String description;
- private int data;
- private int shelfLife;
- private String priority;
+    private String name;
+    private String description;
+    private int data;
+    private int shelfLife;
+    private String priority;
 
- public Recipe(String name, String description, int data, int shelfLife, String priority) {
-  this.name = name;
-  this.description = description;
-  this.data = data;
-  this.shelfLife = shelfLife;
-  this.priority = priority;
- }
+    public Recipe() {
 
- public String getName() {
+    }
+
+    public Recipe(String name, String description, int data, int shelfLife, String priority) {
+        this.name = name;
+        this.description = description;
+        this.data = data;
+        this.shelfLife = shelfLife;
+        this.priority = priority;
+    }
+
+    public String getName() {
 
   return name;
  }
@@ -54,17 +58,22 @@ public class Recipe {
 
  }
 
- public String getPriority() {
-  return priority;
- }
+    public String getPriority() {
+        return priority;
+    }
 
- public void setPriority(String priority) {
-  this.priority = priority;
- }
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
 
- enum Priority {
-  easy,
-  medium,
-  hard,
- }
+    @Override
+    public String toString() {
+        return "Recipe{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", data=" + data +
+                ", shelfLife=" + shelfLife +
+                ", priority='" + priority + '\'' +
+                '}';
+    }
 }

@@ -2,25 +2,14 @@ import Doctor.Doctor;
 import Patient.Patient;
 import Recipe.Recipe;
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 
 public class Main {
     public static void main(String[] args) {
-//        Patient v1 = new Patient("Vlad", "Egorenko", "Alekseevich", 838383);
-//        Patient v2 = new Patient("Kolya", "Ivanov", "Andreevich", 676767);
-//        Patient v3 = new Patient("Nikita", "Ivanenko", "Afonasievich", 676767);
-//        Doctor a1 = new Doctor("Andrey", "Matveev", "Borisovich", "Surgeon");
-//        Doctor a2 = new Doctor("Masha", "Markova", "Bogdanovna", "Surgeon");
-//        Doctor a3 = new Doctor("Dasha", "Marikova", "Vasina", "Surgeon");
-//        Recipe r1 = new Recipe("recipe", "fracture", 21, 22, "Normal");
-//        Recipe r2 = new Recipe("recipe", "fracture", 21, 22, "Normal");
-//        Recipe r3 = new Recipe("recipe", "fracture", 21, 22, "Normal");
         System.out.println("Registration");
         System.out.println("To register a doctor, enter 1");
         System.out.println("To register a patient, enter 2");
-
 
         Scanner scanner = new Scanner(System.in);
 
@@ -39,18 +28,24 @@ public class Main {
 
         }
         else if (x == 2) {
-            System.out.println("Enter patient details: ");
+            System.out.println("Enter patient details and point out his injury priority: ");
             Patient newPatient = new Patient();
+            Recipe newRecipe = new Recipe();
+
             newPatient.setName(scanner.nextLine());
             newPatient.setSecondName(scanner.nextLine());
             newPatient.setThierdName(scanner.nextLine());
             newPatient.setPhone(scanner.nextInt());
+            newRecipe.setPriority(scanner.nextLine());
             System.out.println(newPatient);
-            System.out.println("Details patient: " + newPatient.getName() + newPatient.getSecondName() + newPatient.getThierdName() + newPatient.getPhone());
+            System.out.println("Details patient: " + newPatient.getName() + newPatient.getSecondName() + newPatient.getThierdName() + newRecipe.getPriority() + newPatient.getPhone());
         }
         else {
             System.out.println("Выйти");
 
         }
+
     }
+
 }
+
