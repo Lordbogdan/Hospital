@@ -6,6 +6,10 @@ public class Patient {
     private String thierdName;
     private int phone;
 
+    public Patient() {
+
+    }
+
 
     public Patient(String name, String secondName, String thierdName, int phone) {
         this.name = name;
@@ -49,7 +53,17 @@ public class Patient {
         this.phone = phone;
     }
 
-     public void displayInfo() {
-         System.out.println(name);
+    public void displayInfo() {
+        System.out.println(name);
+    }
+
+    @Override
+    public String toString() {
+        return "Patient{" +
+                "name='" + name + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", thierdName='" + thierdName + '\'' +
+                ", phone=" + phone +
+                '}';
     }
 }

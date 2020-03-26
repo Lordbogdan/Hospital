@@ -10,15 +10,12 @@ public class Doctor {
 
     }
 
-
-
     public Doctor(String name, String secondName, String thierdName, String specialization) {
         this.name = name;
         this.secondName = secondName;
         this.thierdName = thierdName;
         this.specialization = specialization;
         System.out.println();
-
     }
 
     public String getName( ) {

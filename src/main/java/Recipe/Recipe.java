@@ -61,4 +61,10 @@ public class Recipe {
  public void setPriority(String priority) {
   this.priority = priority;
  }
+
+ enum Priority {
+  easy,
+  medium,
+  hard,
+ }
 }
