@@ -1,6 +1,8 @@
-package  Patient;
+package Patient;
 
-public class Patient {
+import java.io.Serializable;
+
+public class Patient implements Serializable {
     private String name;
     private String secondName;
     private String thierdName;
@@ -60,5 +62,9 @@ public class Patient {
                 ", thierdName='" + thierdName + '\'' +
                 ", phone=" + phone +
                 '}';
+    }
+
+    public void displayinfo() {
+        System.out.println("name: " + name + secondName + thierdName + phone);
     }
 }

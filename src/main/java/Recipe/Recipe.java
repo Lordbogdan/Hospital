@@ -1,13 +1,25 @@
 package Recipe;
+
 import Doctor.Doctor;
 import Patient.Patient;
 
-public class Recipe {
+import java.io.Serializable;
+
+public class Recipe implements Serializable {
     private String name;
     private String description;
     private int data;
     private int shelfLife;
     private String priority;
+    private Patient patient;
+
+    public Patient getPatient() {
+        return patient;
+    }
+
+    public void setPatient(Patient patient) {
+        this.patient = patient;
+    }
 
     public Recipe() {
 
@@ -63,7 +75,18 @@ public class Recipe {
     }
 
     public void setPriority(String priority) {
-        this.priority = priority;
+        if (priority.toLowerCase().equals("easy")) {
+            this.priority = priority;
+            return;
+        }
+        if (priority.toLowerCase().equals("medium")) {
+            this.priority = priority;
+            return;
+        }
+        if (priority.toLowerCase().equals("hard")) {
+            this.priority = priority;
+            return;
+        }
     }
 
     @Override
@@ -75,5 +98,10 @@ public class Recipe {
                 ", shelfLife=" + shelfLife +
                 ", priority='" + priority + '\'' +
                 '}';
+    }
+
+
+    public void displayinfo() {
+        System.out.println(name);
     }
 }
