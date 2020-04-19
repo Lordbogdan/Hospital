@@ -1,17 +1,33 @@
-package Recipe;
+package entity;
 
-import Doctor.Doctor;
-import Patient.Patient;
+import entity.Patient;
 
 import java.io.Serializable;
 
 public class Recipe implements Serializable {
-    private String name;
     private String description;
     private int data;
     private int shelfLife;
     private String priority;
     private Patient patient;
+    private Doctor doctor;
+    private long id;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
+    }
 
     public Patient getPatient() {
         return patient;
@@ -25,50 +41,39 @@ public class Recipe implements Serializable {
 
     }
 
-    public Recipe(String name, String description, int data, int shelfLife, String priority) {
-        this.name = name;
+    public Recipe(String description, int data, int shelfLife, String priority) {
         this.description = description;
         this.data = data;
         this.shelfLife = shelfLife;
         this.priority = priority;
     }
 
-    public String getName() {
+    public String getDescription() {
 
-  return name;
- }
+        return description;
+    }
 
- public void setName(String name) {
+    public void setDescription(String description) {
 
-  this.name = name;
- }
+        this.description = description;
+    }
 
- public String getDescription() {
+    public int getData() {
+        return data;
+    }
 
-  return description;
- }
+    public void setData(int data) {
+        this.data = data;
+    }
 
- public void setDescription(String description) {
+    public int getShelfLife() {
+        return shelfLife;
+    }
 
-  this.description = description;
- }
+    public void setShelfLife(int shelfLife) {
+        this.shelfLife = shelfLife;
 
- public int getData() {
-  return data;
- }
-
- public void setData(int data) {
-  this.data = data;
- }
-
- public int getShelfLife() {
-  return shelfLife;
- }
-
- public void setShelfLife(int shelfLife) {
-  this.shelfLife = shelfLife;
-
- }
+    }
 
     public String getPriority() {
         return priority;
@@ -92,16 +97,11 @@ public class Recipe implements Serializable {
     @Override
     public String toString() {
         return "Recipe{" +
-                "name='" + name + '\'' +
+                "name='" + '\'' +
                 ", description='" + description + '\'' +
                 ", data=" + data +
                 ", shelfLife=" + shelfLife +
                 ", priority='" + priority + '\'' +
                 '}';
-    }
-
-
-    public void displayinfo() {
-        System.out.println(name);
     }
 }

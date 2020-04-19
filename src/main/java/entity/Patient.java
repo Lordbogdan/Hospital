@@ -1,30 +1,40 @@
-package Doctor;
+package entity;
 
 import java.io.Serializable;
 
-public class Doctor implements Serializable {
+public class Patient implements Serializable {
     private String name;
     private String secondName;
     private String thierdName;
-    private String specialization;
+    private int phone;
+    private long id;
 
-    public Doctor() {
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public Patient() {
 
     }
 
-    public Doctor(String name, String secondName, String thierdName, String specialization) {
+    public Patient(String name, String secondName, String thierdName, int phone) {
         this.name = name;
         this.secondName = secondName;
         this.thierdName = thierdName;
-        this.specialization = specialization;
+        this.phone = phone;
     }
 
-    public String getName( ) {
+    public String getName() {
 
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
@@ -44,20 +54,25 @@ public class Doctor implements Serializable {
         this.thierdName = thierdName;
     }
 
-    public String getSpecialization() {
-        return specialization;
+    public int getPhone() {
+        return phone;
     }
 
-    public void setSpecialization(String specialization) {
-        this.specialization = specialization;
+    public void setPhone(int phone) {
+        this.phone = phone;
     }
+
     @Override
     public String toString() {
-        return "Doctor{" +
+        return "Patient{" +
                 "name='" + name + '\'' +
                 ", secondName='" + secondName + '\'' +
                 ", thierdName='" + thierdName + '\'' +
-                ", specialization='" + specialization + '\'' +
+                ", phone=" + phone +
                 '}';
+    }
+
+    public void displayinfo() {
+        System.out.println("name: " + name + secondName + thierdName + phone);
     }
 }
