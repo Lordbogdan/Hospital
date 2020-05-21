@@ -1,12 +1,10 @@
 package entity;
 
-import entity.Patient;
-
 import java.io.Serializable;
 
 public class Recipe implements Serializable {
     private String description;
-    private int data;
+    private String data;
     private int shelfLife;
     private String priority;
     private Patient patient;
@@ -41,7 +39,7 @@ public class Recipe implements Serializable {
 
     }
 
-    public Recipe(String description, int data, int shelfLife, String priority) {
+    public Recipe(String description, String data, int shelfLife, String priority) {
         this.description = description;
         this.data = data;
         this.shelfLife = shelfLife;
@@ -58,11 +56,11 @@ public class Recipe implements Serializable {
         this.description = description;
     }
 
-    public int getData() {
+    public String getData() {
         return data;
     }
 
-    public void setData(int data) {
+    public void setData(String data) {
         this.data = data;
     }
 
@@ -102,6 +100,8 @@ public class Recipe implements Serializable {
                 ", data=" + data +
                 ", shelfLife=" + shelfLife +
                 ", priority='" + priority + '\'' +
+                ",id Patient='" + id + '\'' +
+                ",id Doctor='" + id + '\'' +
                 '}';
     }
 }

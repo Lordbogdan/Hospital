@@ -10,11 +10,11 @@ import java.util.ArrayList;
 
 public class DoctorRepositoryFile implements DoctorRepository {
 
+    ArrayList<Doctor> doctorArrayList;
+
     public DoctorRepositoryFile() {
         this.doctorArrayList = FileUtils.<Doctor>readFromFile("Doctors");
     }
-
-    ArrayList<Doctor> doctorArrayList;
 
     @Override
     public ArrayList<Doctor> readAllDoctors() {

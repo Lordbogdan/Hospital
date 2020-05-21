@@ -3,10 +3,11 @@ package service;
 import entity.Doctor;
 import entity.Patient;
 import entity.Recipe;
+import utils.FileUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
+
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -14,10 +15,14 @@ import java.util.Scanner;
 public class ServiceRecipe {
     ArrayList<Recipe> recipeArrayList;
     ServicePatient sp = new ServicePatient();
+    ServiceDoctor sd = new ServiceDoctor();
 
-    public ServiceRecipe(ArrayList<Recipe> recipeArrayList) {
-        this.recipeArrayList = recipeArrayList;
+
+    public ServiceRecipe() {
+        this.recipeArrayList = FileUtils.<Recipe>readFromFile("Recipe");
+        System.out.println();
     }
+
 
     public void createNewRecipe(Scanner scanner) throws Exception {
         System.out.println("Test Recipe 1");
@@ -27,15 +32,38 @@ public class ServiceRecipe {
 
 
         newRecipe.setId(recipeArrayList.size() + 1);
-
+        System.out.print("Введите описание рецепта: ");
         newRecipe.setDescription(scanner.nextLine());
-        newRecipe.setData(scanner.nextInt());
-        scanner.nextLine();
+        System.out.print("Введите дату регистрации рецепта: ");
+        newRecipe.setData(scanner.nextLine());
+        System.out.print("Укажите id пациента: ");
         newRecipe.setPatient(sp.getPatient(scanner.nextInt()));
+        System.out.print("Укажите id врача: ");
         scanner.nextLine();
-        newRecipe.setDoctor(null); //todo доделать рецепт "сохарнить в файл"
+        newRecipe.setDoctor(sd.getDoctor(scanner.nextInt()));
+        scanner.nextLine();
+        System.out.print("Укажите состояние пациента Hard, Medium, Easy: ");
+        newRecipe.setPriority(scanner.nextLine());
 
+        recipeArrayList.add(newRecipe);
+
+        oos.writeObject(recipeArrayList);
+        oos.close();
 
     }
 
+    public void showAllPatient() {
+
+        System.out.println("Список рецептов");
+        recipeArrayList.forEach(recipe -> {
+            System.out.println("Patient " + recipe);
+        });
+    }
+
+    public void showAllDoctor() {
+        System.out.println("Список рецептов");
+        recipeArrayList.forEach(doctor -> {
+            System.out.println("Doctor " + doctor);
+        });
+    }
 }

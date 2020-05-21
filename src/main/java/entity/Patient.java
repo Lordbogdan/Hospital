@@ -72,7 +72,4 @@ public class Patient implements Serializable {
                 '}';
     }
 
-    public void displayinfo() {
-        System.out.println("name: " + name + secondName + thierdName + phone);
-    }
 }

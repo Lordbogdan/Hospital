@@ -1,13 +1,14 @@
 package service;
 
 import entity.Patient;
+import entity.Recipe;
 import utils.FileUtils;
+import utils.InOutUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class ServicePatient {
     ArrayList<Patient> patientArrayList;
@@ -16,7 +17,7 @@ public class ServicePatient {
         this.patientArrayList = FileUtils.<Patient>readFromFile("Patient");
     }
 
-    public void createNewPatient(Scanner scanner) throws Exception {
+    public void createNewPatient() throws Exception {
         System.out.println("Enter patient details and point out his injury priority: ");
         Patient newPatient = new Patient();
         File file = new File("Patient");
@@ -24,11 +25,11 @@ public class ServicePatient {
 
         newPatient.setId(patientArrayList.size() + 1);
 
-        newPatient.setName(scanner.nextLine());
-        newPatient.setSecondName(scanner.nextLine());
-        newPatient.setThierdName(scanner.nextLine());
-        newPatient.setPhone(scanner.nextInt());
-        scanner.nextLine();
+        newPatient.setName(InOutUtils.getLine());
+        newPatient.setSecondName(InOutUtils.getLine());
+        newPatient.setThierdName(InOutUtils.getLine());
+        newPatient.setPhone(InOutUtils.getInt());
+
 
         patientArrayList.add(newPatient);
 

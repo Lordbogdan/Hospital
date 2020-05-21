@@ -65,7 +65,7 @@ public class Doctor implements Serializable {
         return "Doctor{" +
                 "name='" + name + '\'' +
                 ", secondName='" + secondName + '\'' +
-                ", thierdName='" + thierdName + '\'' +
+                ", thierdName='" + thierdName + '\'' +           //
                 ", specialization='" + specialization + '\'' +
                 '}';
     }
